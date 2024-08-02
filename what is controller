@@ -1,0 +1,28 @@
+package controller;
+
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+//HTTP  요청을 받아서 응답하는 컴포넌트 스트링부트가 자동으로 생성
+@Controller
+public class BoardController {
+      //게시물 목록을 보여준다
+      // 컨트롤러의 메소드가 리턴하는 문자열은 테플릿이름이다.
+
+
+
+    @GetMapping("/")
+    public String list(){
+    return "list";
+    }
+}
+우리는 이 스프링을 만들때 타임 리프를 선택해서 
+탬플릿을 만들기로 만들기로했음
+
+뷰 템플릿 페이지는
+컨트롤러와 모델로 나뉨
+뷰 템플릿을 보기위해 컨트롤러를 만들어준다
+컨트롤러를 만들고  매소드의 리턴값으로 템플릿으로 보여준뒤
+GETMAPPING으로  URL 의 주소를 지정
+
+
